@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    private Player _player;
+
+    private void Start()
+    {
+        _player = GetComponent<Player>();
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
@@ -27,9 +33,10 @@ public class PlayerInput : MonoBehaviour
     void Dragged()
     {
         var mousePosX = Input.mousePosition.x;
-        var mousePosNormalized = mousePosX - 540;
-        mousePosNormalized = mousePosNormalized * 4 / 1080;
-        GetComponent<Player>().MovePlayer(mousePosNormalized);
+        var mousePosNormalized = mousePosX - Screen.width /2;
+        mousePosNormalized = mousePosNormalized * 4 / Screen.width;
+        _player.MovePlayer(mousePosNormalized);
+
         //BURADA MOUSEUN X EKSENÝNDEKÝ HAREKETÝNÝ OKUDUK
         //deðiþklenlerin ayný anda ismini deðiþtirmek için CTRL+R+R diyoruz
     }
