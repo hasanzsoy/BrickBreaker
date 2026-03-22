@@ -27,8 +27,11 @@ public class PlayerInput : MonoBehaviour
     void Dragged()
     {
         var mousePosX = Input.mousePosition.x;
-        Debug.Log(mousePosX);
+        var mousePosNormalized = mousePosX - 540;
+        mousePosNormalized = mousePosNormalized * 4 / 1080;
+        GetComponent<Player>().MovePlayer(mousePosNormalized);
         //BURADA MOUSEUN X EKSENÝNDEKÝ HAREKETÝNÝ OKUDUK
+        //deðiþklenlerin ayný anda ismini deðiþtirmek için CTRL+R+R diyoruz
     }
 
     void DragStopped() 
