@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameDirector : MonoBehaviour
@@ -12,6 +13,26 @@ public class GameDirector : MonoBehaviour
         {
             RestartLevel();
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            LoadNextLevel();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            LoadPreviousLevel();
+        }
+    }
+
+   
+    private void LoadNextLevel()
+    {
+        levelManager.curLevelNo +=1;
+        RestartLevel();
+    }
+    private void LoadPreviousLevel()
+    {
+        levelManager.curLevelNo = Mathf.Max(levelManager.curLevelNo - 1,1);
+        RestartLevel();
     }
 
     void RestartLevel() 
