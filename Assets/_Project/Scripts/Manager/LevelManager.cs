@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
     private void CreateNewLevel()
     {
         var normalizedLevelNo = (curLevelNo-1) % levels.Count;
-        _curLevel = Instantiate(levels[curLevelNo - 1]); // instantiate kodu herhangi bir obje oluþturmak istediðim kullanýlýr
+        _curLevel = Instantiate(levels[normalizedLevelNo]); // instantiate kodu herhangi bir obje oluþturmak istediðim kullanýlýr
         _curLevel.transform.position = Vector3.zero;
     }
 
