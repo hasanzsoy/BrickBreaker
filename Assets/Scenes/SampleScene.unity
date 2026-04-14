@@ -524,6 +524,7 @@ MonoBehaviour:
   - {fileID: -8245804383092994290, guid: 50eedc34aa6a4c54a88e9eeb8f1867fb, type: 3}
   - {fileID: -8245804383092994290, guid: af8b51367bec5444987375c965177a46, type: 3}
   - {fileID: -8245804383092994290, guid: f77c893c587bc8f41934b18444a1d5f0, type: 3}
+  - {fileID: -8245804383092994290, guid: 1257bc0c0c7fc394f9219985fa725826, type: 3}
   curLevelNo: 3
 --- !u!4 &1464671683
 Transform:
